@@ -27,6 +27,11 @@ int main()
         f >> nod;
         VecStFin.push_back(nod);
     }
+    if (( cuvantdeincercat == '' ) && ( VecStFin[0] == 1 ))
+    {
+        cout<<"ACCEPT";
+        return 0;
+    }
     unordered_map<int, unordered_map<char, int> > sigma;
     int branches = 0;
     f >> branches;
@@ -41,12 +46,14 @@ int main()
     for(int i = 0; i < strlen(cuvantdeincercat); i++) {
         char c = cuvantdeincercat[i];
         if(sigma.find(currentState) == sigma.end()) {
-            return 0;
             cout<<"REJECT";
+            return 0;
+            
         }
         if(sigma[currentState].find(c) == sigma[currentState].end()) {
-            return 0;
             cout<<"REJECT";
+            return 0;
+        
         }
         currentState = sigma[currentState][c];
     }
@@ -54,7 +61,7 @@ int main()
         cout << "ACCEPT";
         return 0;
     } else {
-        return 0;
         cout<< "REJECT";
+        return 0;
     }
 }
