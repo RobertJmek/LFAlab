@@ -8,15 +8,14 @@
 using namespace std;
 
 ifstream f("input.txt");
-ofstream g("output.txt");
 
 int main()
 {
     int nrNoduri;
     f >> nrNoduri;
-    char mat[nrNoduri + 1][2 * nrNoduri];
     int nrNoduriF;
     f >> nrNoduriF;
+    vector <int> vectorstari;
     char cuvantdeincercat[100];
     cout<<"Ce cuvant vrei sa incerci? "<<endl;
     cin.get(cuvantdeincercat,100);
@@ -41,6 +40,7 @@ int main()
     int currentState = 1;
     for(int i = 0; i < strlen(cuvantdeincercat); i++) {
         char c = cuvantdeincercat[i];
+        vectorstari.push_back(currentState);
         if(sigma.find(currentState) == sigma.end()) {
             cout<<"REJECT";
             return 0;
@@ -54,6 +54,9 @@ int main()
         currentState = sigma[currentState][c];
     }
     if(find(VecStFin.begin(), VecStFin.end(), currentState) != VecStFin.end()) {
+        for ( int i=0; i < vectorstari.size(); i++ )
+        cout<<vectorstari[i]<<" ";
+        cout<<endl;
         cout << "ACCEPT";
         return 0;
     } else {
