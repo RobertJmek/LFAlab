@@ -27,11 +27,7 @@ int main()
         f >> nod;
         VecStFin.push_back(nod);
     }
-    if (( cuvantdeincercat == '' ) && ( VecStFin[0] == 1 ))
-    {
-        cout<<"ACCEPT";
-        return 0;
-    }
+    
     unordered_map<int, unordered_map<char, int> > sigma;
     int branches = 0;
     f >> branches;
