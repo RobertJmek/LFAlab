@@ -1,0 +1,10 @@
+Cuvantul aaaabbbbbbbbbbb NU este generat de gramatica data.
+Cuvantul aabb este generat de gramatica data.
+Cuvantul aad este generat de gramatica data.
+Cuvantul d este generat de gramatica data.
+Cuvantul aabbbbbbbbbbbb este generat de gramatica data.
+Cuvantul aabbbbbbbbbbb NU este generat de gramatica data.
+Cuvantul aabbbbbbbbbbbbb NU este generat de gramatica data.
+Cuvantul aabbbbbbbbbb este generat de gramatica data.
+Cuvantul aaaabbb NU este generat de gramatica data.
+Cuvantul aabbbb este generat de gramatica data.
